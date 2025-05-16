@@ -3,7 +3,7 @@
 - A Basic "Django" Project
 - Tech: Python, Django, Time & Date, HTML, CSS, Git...
 
-## run this project by :
+## Run This Project By:
 
 - python pip install -r requirements.txt
 - python manage.py runserver
