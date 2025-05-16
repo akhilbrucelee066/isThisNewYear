@@ -1,0 +1,107 @@
+* {
+  background-color: #000000;
+}
+
+:root {
+  --prime: #b667ff;
+  --dark-prime: #7d179980;
+  --sec: #ffbb1d;
+  --dark-sec: #7e5509;
+  --dark-back: #302001;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8vh;
+  border-radius: 3vh;
+  background-color: var(--dark-back);
+  padding: 3vh;
+  border: var(--dark-sec) solid 1px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: var(--prime);
+  padding: 2vh;
+  border-radius: 3vh;
+  border: var(--prime) solid 1px;
+  background-color: var(--dark-prime);
+}
+
+h2 {
+  color: var(--sec);
+  padding: 2vh;
+  border-radius: 3vh;
+  border: var(--sec) solid 1px;
+  background-color: var(--dark-sec);
+}
+
+h3 {
+  color : var(--dark-prime);
+}
+
+p {
+  margin-top: 0;
+  color: var(--dark-sec);
+}
+
+.t-container{
+  display : flex;
+  width: 30vh;
+  flex-direction : column;
+  align-items : center;
+}
+
+.t-container:hover{
+  filter: brightness(2);
+}
+
+h1:hover,
+h2:hover,
+p:hover,
+.if-newyear:hover {
+  transform: scale(1.05);
+  filter: brightness(1.3);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+  box-shadow: 0 0 20px var(--dark-sec);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.if-newyear{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.dev{
+  color: var(--dark-prime);
+}
+
+.dev:hover{
+  filter: brightness(2);
+}
+
+.footer{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}

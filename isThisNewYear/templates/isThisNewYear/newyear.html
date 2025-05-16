@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE ='html'>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Is This New Year???" />
+    <title>Is This New Year?</title>
+    <link rel="stylesheet" href="{% static 'isThisNewYear/style.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Is This New Year?</h1>
+      {% if newyear %}
+      <h2>🎉 YES 🎉</h2>
+      <h2>🥳 HAPPY NEW YEAR 🥳</h2>
+      {% else %}
+      <h2>NO</h2>
+      {% endif %}
+    </div>
+    <div class="footer">
+      <div class="t-container">
+        <h3>NOW</h3>
+        <p>{{ today }}</p>
+      </div>
+      <div class="if-newyear">
+        <input
+          type="checkbox"
+          id="yearToggle"
+          {% if simulate %}checked{% endif %}
+        />
+        <h3>If New Year</h3>
+      </div>
+      <script>
+        const yearToggle = document.getElementById("yearToggle");
+        yearToggle.addEventListener("change", function () {
+          if (this.checked) {
+            window.location.href = "{% url 'index' 1 %}";
+          } else {
+            window.location.href = "{% url 'index' %}";
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>
